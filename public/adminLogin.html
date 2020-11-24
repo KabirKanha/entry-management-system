@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/jpg" href="Images/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="ems.css">
+    <script src="https://kit.fontawesome.com/f51a8a2dad.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</head>
+<body class="d-flex flex-column">
+<div class="navbar">
+    <div class="img">
+        <a class="navbar-brand" href="ems.html">
+            <img src="Images/logo.svg" class="d-inline-block"
+                 height="40px"  alt="">
+        </a>
+    </div>
+    <div class="img">
+        <a href="https://www.linkedin.com/in/kabirkanha" target="_blank"><img src="Images/linkedIn.png" width="40px"
+                                                                              height="40px" alt="LinkedIn"></a>
+    </div>
+</div>
+<div>
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <br>
+                <h1 class="font-weight-light mt-4 text-white">Admin Login</h1>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-content">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="adminLoginForm">
+                    <br>
+                    <p class="lead text-white-50">Enter admin credentials.</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                        </div>
+                        <input type="email" class="form-control" id="admin-email" placeholder="Email ID" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-key"></i></span>
+                        </div>
+                        <input type="password" class="form-control" id="admin-password" placeholder="Password" required>
+                    </div>
+                    <div class="page-content">
+                        <div class="container text-center">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <br>
+                                    <p>
+                                        <br>
+                                        <input type="submit" class="btn btn-primary btn-lg btn-block"
+                                               value="Login"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="sticky-footer" class="py-4 text-black-100">
+    <div class="container text-center">
+        <small>Copyright &copy; Kabir Kanha Arora</small>
+    </div>
+</footer>
+
+<script defer src="adminLogin.js"></script>
+<script defer src="functions.js"></script>
+</body>
+</html>
