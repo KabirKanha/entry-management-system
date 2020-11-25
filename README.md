@@ -34,7 +34,7 @@ _Please do not misuse these. It really serves no purpose to do so._
 
 ## Use Cases
 
-The use cases for this kind of a portal are plenty. The focus is to build an application to be used at the entry in an oce, but this can easily be extended and made suitable for residential complexes, hospitals, universities, and many more.
+The use cases for this kind of a portal are plenty. The focus is to build an application to be used at the entry in an office, but this can easily be extended and made suitable for residential complexes, hospitals, universities, and many more.
 
 ## Basic Idea
 
@@ -107,7 +107,7 @@ The visitor is then notified whether the check-out was successful or not.
 <br><br>
 Upon successful check-out, the visitor receives an email giving him all the details of his visit for his perusal.
 
-![Check-Out Email](public/Images/Screenshots/12_CheckoutMail.png)
+![Check-Out Email](public/Images/Screenshots/12_CheckOutMail.png)
 <br><br>
 The visitor's entry is also retracted from the database in Firebase instantly.
 
@@ -123,7 +123,7 @@ Once successsfully logged in, the admin panel looks like this.
 <br><br>
 The admin can view a log of all past visits. He/She also has the ability to sort, filter and hide columns. He/she may also copy the file, print it, or export it to XLSX, CSV or PDF.
 
-![Visit history](public/Images/Screenshots/15_VisitHistory.png)
+![Visit history](public/Images/Screenshots/15_Visithistory.png)
 <br><br>
 If needed, certain visitors may be blacklisted from the system, which would prevent them from trying to check-in in the future and also sends them an email informing them about the same.
 
@@ -191,9 +191,7 @@ I have used:
 
 ## A Note About The SMS API
 
-I am using a trial account at the moment and while I am getting enough free credits to start
-with, a paid account will be required at a later stage when this product is nally deployed
-in the real world. (This holds true for the Email API too).
+I am using a trial account at the moment and while I am getting enough free credits to start with, a paid account will be required at a later stage when this product is finally deployed in the real world. (This holds true for the Email API too).
 
 Please note that, as per **TRAI regulations**, *'promotional messages'* can only be sent to **non-DND numbers between 9AM and 9PM**. Messages sent after 9PM are automatically queued for 9AM for the following morning.
 
