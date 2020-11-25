@@ -11,9 +11,9 @@ This repository serves to store my code for an **Entry Management System** (web-
 - [Use Cases](#Use-Cases)
 - [Features](#Features)
 - [Overview](#Overview)
+- [Tech Stack](#Tech-Stack)
 - [Walk-through](#Walk-Through)
 - [Future Scope and Improvements](#Future-Scope-And-Improvements)
-- [Tech Stack](#Tech-Stack)
 - [A Note About The SMS API](#A-Note-About-The-SMS-API)
 - [Contributors](#Contributors)
 
@@ -53,6 +53,28 @@ The main features that make up the backbone of this project include:
 Throughout the project, I have tried to maintain a very neat and uncluttered UI, which gives off a graceful and professional look.
 The coding has been done in a modular manner that ensures easy flexibility and scalability.<br>
 A [fully-functioning deployment](http://entry-management-system-kka.firebaseapp.com/) has already been created and requires **no setup**.
+
+## Tech Stack
+
+I have tried to use minimal variety in terms of tech stack to ensure flexibility. Given that constraint, I have managed to create a robust application that accomplishes all the desired features and requires no additional setup. Simply *click and go*.
+
+I have used:
+- **HTML**<br>
+*to create the webpages and for basic arrangements.*
+- **CSS**<br>
+*to style the webpages.*
+- **JavaScript**<br>
+*for adding dynamic functionalities to the webpages.*
+- **Firebase**<br>
+*as the backend.*
+- **Firestore**<br>
+*for a real-time database.*
+- **jQuery**<br>
+*for sending ajax requests to send SMSes.*
+- **EmailJS**<br>
+*for sending emails to the host and the visitor.*
+- **Fast2SMS API**<br>
+*for sending SMS notifications to the host.*
 
 ## Walk-Through
 
@@ -157,28 +179,6 @@ in, by simply ltering and displaying the already existing historical records.
 - **Automating a phone call to get approval from the host, in addition to Email and SMS, in case of no response.**
 
     Like the Email and SMS, a third-party API can be integrated with the application to achieve this functionality.
-
-## Tech Stack
-
-I have tried to use minimal variety in terms of tech stack to ensure flexibility. Given that constraint, I have managed to create a robust application that accomplishes all the desired features and requires no additional setup. Simply *click and go*.
-
-I have used:
-- **HTML**<br>
-*to create the webpages and for basic arrangements.*
-- **CSS**<br>
-*to style the webpages.*
-- **JavaScript**<br>
-*for adding dynamic functionalities to the webpages.*
-- **Firebase**<br>
-*as the backend.*
-- **Firestore**<br>
-*for a real-time database.*
-- **jQuery**<br>
-*for sending ajax requests to send SMSes.*
-- **EmailJS**<br>
-*for sending emails to the host and the visitor.*
-- **Fast2SMS API**<br>
-*for sending SMS notifications to the host.*
 
 ## A Note About The SMS API
 
