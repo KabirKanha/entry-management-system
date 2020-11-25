@@ -9,7 +9,6 @@ This repository serves to store my code for an **Entry Management System** (web-
 - [Project Overview](#Project-Overview)
 - [Deployment](#Deployment)
 - [Use Cases](#Use-Cases)
-- [Basic Idea](#Basic-Idea)
 - [Features](#Features)
 - [Overview](#Overview)
 - [Walk-through](#Walk-Through)
@@ -35,14 +34,6 @@ _Please do not misuse these. It really serves no purpose to do so._
 ## Use Cases
 
 The use cases for this kind of a portal are plenty. The focus is to build an application to be used at the entry in an office, but this can easily be extended and made suitable for residential complexes, hospitals, universities, and many more.
-
-## Basic Idea
-
-I started with a very raw idea in my head which I then detailed out quickly on a **whiteboard** next to me.
-
-<img src="public/Images/Sketch.jpg" width="60%" alt="Sketch">
-
-This is a photograph of the same.
 
 ## Features
 
