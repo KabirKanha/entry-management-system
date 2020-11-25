@@ -30,9 +30,9 @@ function submitForm(e) {
     hname = getInputVal('host-name-1')
         + " " + getInputVal('host-name-2') + " " + getInputVal('host-name-3');
     umail = getInputVal('visitor-email');
-    uphone = '+91-' + getInputVal('visitor-phone');
+    uphone = getInputVal('visitor-phone');
     hmail = getInputVal('host-email');
-    hphone = '+91-' + getInputVal('host-phone');
+    hphone = getInputVal('host-phone');
 
     let isBlacklisted = users.collection("blacklist").doc(umail);
     isBlacklisted.get().then(function (doc) {
@@ -49,14 +49,42 @@ function submitForm(e) {
                         timestamp: timeStr,
                         visitorname: uname,
                         visitoremail: umail,
-                        visitorphone: uphone,
+                        visitorphone: '+91-' + uphone,
                         hostname: hname,
                         hostemail: hmail,
-                        hostphone: hphone,
+                        hostphone: '+91-' + hphone,
                         checkintime: time
                     })
                         .then(function (docRef) {
                             console.log("Document written with ID: ", docRef);
+                            let docArchive = users.collection("visitHistory").doc(timeStr);
+                            docArchive.get().then(function (doc1) {
+                                if (doc1.exists) {
+                                    alert('ERROR!\nUnable to add visit to history.');
+                                } else {
+                                    users.collection("visitHistory").doc(timeStr).set({
+                                        checkindate: date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear(),
+                                        visitorname: uname,
+                                        visitoremail: umail,
+                                        visitorphone: uphone,
+                                        hostname: hname,
+                                        hostemail: hmail,
+                                        hostphone: hphone,
+                                        checkintime: time,
+                                        checkouttime: "N.A.",
+                                        status: "Active",
+                                    })
+                                        .then(function (docRef) {
+                                            console.log("Visit history added with ID: ", docArchive);
+                                            window.location.replace("index.html");
+                                        })
+                                        .catch(function (error) {
+                                            console.error("Error adding history: ", error);
+                                        });
+                                }
+                            }).catch(function (error) {
+                                console.log("Error adding history::", error);
+                            });
                             send();
                             alert("SUCCESS!\nYou have successfully been checked-in.");
                         })
@@ -71,34 +99,7 @@ function submitForm(e) {
     }).catch(function (error) {
         console.log("Error getting document:", error);
     });
-    let docArchive = users.collection("visitHistory").doc(timeStr);
-    docArchive.get().then(function (doc) {
-        if (doc.exists) {
-            alert('ERROR!\nUnable to add visit to history.');
-        } else {
-            users.collection("visitHistory").doc(timeStr).set({
-                checkindate: date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear(),
-                visitorname: uname,
-                visitoremail: umail,
-                visitorphone: uphone,
-                hostname: hname,
-                hostemail: hmail,
-                hostphone: hphone,
-                checkintime: time,
-                checkouttime: "N.A.",
-                status: "Active",
-            })
-                .then(function (docRef) {
-                    console.log("Visit history added with ID: ", docArchive);
-                    // window.location.replace("index.html");
-                })
-                .catch(function (error) {
-                    console.error("Error adding history: ", error);
-                });
-        }
-    }).catch(function (error) {
-        console.log("Error adding history::", error);
-    });
+
 }
 
 /**

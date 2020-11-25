@@ -45,10 +45,10 @@ function getTime() {
  */
 function sendMail(service_id, template_id, template_params) {
     console.log("Sending Email")
-//     emailjs.send(service_id, template_id, template_params)
-//         .then(function (response) {
-//             console.log('SUCCESS!', response.status, response.text);
-//         }, function (error) {
-//             console.log('FAILED...', error);
-//         })
+    emailjs.send(service_id, template_id, template_params)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+        }, function (error) {
+            console.log('FAILED...', error);
+        })
 }

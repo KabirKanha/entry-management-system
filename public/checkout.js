@@ -27,18 +27,19 @@ function submitForm(e) {
     docRef.get().then(function (doc) {
         if (doc.exists) {
             let data = doc.data();
-            uname = data.visitorname1 + " " + data.visitorname2 + " " + data.visitorname3;
+            uname = data.visitorname;
+            console.log(uname)
             uphone = data.visitorphone;
             checkintime = data.checkintime;
-            hname = data.hostname1 + " " + data.hostname2 + " " + data.hostname3;
+            hname = data.hostname;
             timeStr = data.timestamp;
             console.log(timeStr);
             users.collection("checkedInUsers").doc(umail).delete().then(function () {
                 alert("SUCCESS!\nYou have successfully been checked out.");
                 send();
                 let docArchive = users.collection("visitHistory").doc(timeStr);
-                docArchive.get().then(function (doc) {
-                    if (doc.exists) {
+                docArchive.get().then(function (doc1) {
+                    if (doc1.exists) {
                         users.collection("visitHistory").doc(timeStr).update({
                             checkouttime: checkouttime,
                             status: "Inactive",
@@ -55,7 +56,7 @@ function submitForm(e) {
                 }).catch(function (error) {
                     console.log("Error adding history::", error);
                 });
-                // window.location.replace("index.html");
+                window.location.replace("index.html");
             }).catch(function (error) {
                 console.log("Error getting document:", error);
             });
@@ -71,6 +72,7 @@ function submitForm(e) {
  * Sets template parameters and calls the email sending utility.
  */
 function send() {
+    console.log(uname)
     let templateParams = {
         uname: uname,
         uphone: uphone,
