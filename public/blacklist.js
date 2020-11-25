@@ -32,6 +32,7 @@ function submitForm(e) {
                     console.log("Document written with ID: ", docRef);
                     alert("SUCCESS!\nUser has successfully been blacklisted.");
                     send();
+                    // window.location.replace("viewBlacklist.html");
                 })
                 .catch(function (error) {
                     console.error("Error adding document: ", error);

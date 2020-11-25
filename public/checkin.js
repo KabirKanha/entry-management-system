@@ -66,17 +66,18 @@ function submitForm(e) {
                                         checkindate: date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear(),
                                         visitorname: uname,
                                         visitoremail: umail,
-                                        visitorphone: uphone,
+                                        visitorphone: '+91-' + uphone,
                                         hostname: hname,
                                         hostemail: hmail,
-                                        hostphone: hphone,
+                                        hostphone: '+91-' + hphone,
                                         checkintime: time,
                                         checkouttime: "N.A.",
                                         status: "Active",
                                     })
-                                        .then(function (docRef) {
+                                        .then(function (docArchive) {
+                                            send();
                                             console.log("Visit history added with ID: ", docArchive);
-                                            window.location.replace("index.html");
+                                            // window.location.replace("index.html");
                                         })
                                         .catch(function (error) {
                                             console.error("Error adding history: ", error);
@@ -85,8 +86,8 @@ function submitForm(e) {
                             }).catch(function (error) {
                                 console.log("Error adding history::", error);
                             });
-                            send();
                             alert("SUCCESS!\nYou have successfully been checked-in.");
+                            // window.location.replace("index.html");
                         })
                         .catch(function (error) {
                             console.error("Error adding document: ", error);

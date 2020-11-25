@@ -36,7 +36,7 @@ function submitForm(e) {
             console.log(timeStr);
             users.collection("checkedInUsers").doc(umail).delete().then(function () {
                 alert("SUCCESS!\nYou have successfully been checked out.");
-                send();
+
                 let docArchive = users.collection("visitHistory").doc(timeStr);
                 docArchive.get().then(function (doc1) {
                     if (doc1.exists) {
@@ -46,6 +46,8 @@ function submitForm(e) {
                         })
                             .then(function (docRef) {
                                 console.log("Visit history updated with ID: ", docArchive);
+                                send();
+                                // window.location.replace("index.html");
                             })
                             .catch(function (error) {
                                 console.error("Error adding history: ", error);
@@ -56,7 +58,6 @@ function submitForm(e) {
                 }).catch(function (error) {
                     console.log("Error adding history::", error);
                 });
-                window.location.replace("index.html");
             }).catch(function (error) {
                 console.log("Error getting document:", error);
             });
