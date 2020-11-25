@@ -9,12 +9,11 @@ This repository serves to store my code for an **Entry Management System** (web-
 - [Project Overview](#Project-Overview)
 - [Deployment](#Deployment)
 - [Use Cases](#Use-Cases)
-- [Basic Idea](#Basic-Idea)
 - [Features](#Features)
 - [Overview](#Overview)
+- [Tech Stack](#Tech-Stack)
 - [Walk-through](#Walk-Through)
 - [Future Scope and Improvements](#Future-Scope-And-Improvements)
-- [Tech Stack](#Tech-Stack)
 - [A Note About The SMS API](#A-Note-About-The-SMS-API)
 - [Contributors](#Contributors)
 
@@ -34,15 +33,7 @@ _Please do not misuse these. It really serves no purpose to do so._
 
 ## Use Cases
 
-The use cases for this kind of a portal are plenty. The focus is to build an application to be used at the entry in an oce, but this can easily be extended and made suitable for residential complexes, hospitals, universities, and many more.
-
-## Basic Idea
-
-I started with a very raw idea in my head which I then detailed out quickly on a **whiteboard** next to me.
-
-<img src="public/Images/Sketch.jpg" width="60%" alt="Sketch">
-
-This is a photograph of the same.
+The use cases for this kind of a portal are plenty. The focus is to build an application to be used at the entry in an office, but this can easily be extended and made suitable for residential complexes, hospitals, universities, and many more.
 
 ## Features
 
@@ -62,6 +53,28 @@ The main features that make up the backbone of this project include:
 Throughout the project, I have tried to maintain a very neat and uncluttered UI, which gives off a graceful and professional look.
 The coding has been done in a modular manner that ensures easy flexibility and scalability.<br>
 A [fully-functioning deployment](http://entry-management-system-kka.firebaseapp.com/) has already been created and requires **no setup**.
+
+## Tech Stack
+
+I have tried to use minimal variety in terms of tech stack to ensure flexibility. Given that constraint, I have managed to create a robust application that accomplishes all the desired features and requires no additional setup. Simply *click and go*.
+
+I have used:
+- **HTML**<br>
+*to create the webpages and for basic arrangements.*
+- **CSS**<br>
+*to style the webpages.*
+- **JavaScript**<br>
+*for adding dynamic functionalities to the webpages.*
+- **Firebase**<br>
+*as the backend.*
+- **Firestore**<br>
+*for a real-time database.*
+- **jQuery**<br>
+*for sending ajax requests to send SMSes.*
+- **EmailJS**<br>
+*for sending emails to the host and the visitor.*
+- **Fast2SMS API**<br>
+*for sending SMS notifications to the host.*
 
 ## Walk-Through
 
@@ -107,7 +120,7 @@ The visitor is then notified whether the check-out was successful or not.
 <br><br>
 Upon successful check-out, the visitor receives an email giving him all the details of his visit for his perusal.
 
-![Check-Out Email](public/Images/Screenshots/12_CheckoutMail.png)
+![Check-Out Email](public/Images/Screenshots/12_CheckOutMail.png)
 <br><br>
 The visitor's entry is also retracted from the database in Firebase instantly.
 
@@ -123,7 +136,7 @@ Once successsfully logged in, the admin panel looks like this.
 <br><br>
 The admin can view a log of all past visits. He/She also has the ability to sort, filter and hide columns. He/she may also copy the file, print it, or export it to XLSX, CSV or PDF.
 
-![Visit history](public/Images/Screenshots/15_VisitHistory.png)
+![Visit history](public/Images/Screenshots/15_Visithistory.png)
 <br><br>
 If needed, certain visitors may be blacklisted from the system, which would prevent them from trying to check-in in the future and also sends them an email informing them about the same.
 
@@ -167,33 +180,9 @@ in, by simply ltering and displaying the already existing historical records.
 
     Like the Email and SMS, a third-party API can be integrated with the application to achieve this functionality.
 
-## Tech Stack
-
-I have tried to use minimal variety in terms of tech stack to ensure flexibility. Given that constraint, I have managed to create a robust application that accomplishes all the desired features and requires no additional setup. Simply *click and go*.
-
-I have used:
-- **HTML**<br>
-*to create the webpages and for basic arrangements.*
-- **CSS**<br>
-*to style the webpages.*
-- **JavaScript**<br>
-*for adding dynamic functionalities to the webpages.*
-- **Firebase**<br>
-*as the backend.*
-- **Firestore**<br>
-*for a real-time database.*
-- **jQuery**<br>
-*for sending ajax requests to send SMSes.*
-- **EmailJS**<br>
-*for sending emails to the host and the visitor.*
-- **Fast2SMS API**<br>
-*for sending SMS notifications to the host.*
-
 ## A Note About The SMS API
 
-I am using a trial account at the moment and while I am getting enough free credits to start
-with, a paid account will be required at a later stage when this product is nally deployed
-in the real world. (This holds true for the Email API too).
+I am using a trial account at the moment and while I am getting enough free credits to start with, a paid account will be required at a later stage when this product is finally deployed in the real world. (This holds true for the Email API too).
 
 Please note that, as per **TRAI regulations**, *'promotional messages'* can only be sent to **non-DND numbers between 9AM and 9PM**. Messages sent after 9PM are automatically queued for 9AM for the following morning.
 
