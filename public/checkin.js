@@ -77,7 +77,6 @@ function submitForm(e) {
                                         .then(function (docArchive) {
                                             send();
                                             console.log("Visit history added with ID: ", docArchive);
-                                            // window.location.replace("index.html");
                                         })
                                         .catch(function (error) {
                                             console.error("Error adding history: ", error);
@@ -87,7 +86,6 @@ function submitForm(e) {
                                 console.log("Error adding history::", error);
                             });
                             alert("SUCCESS!\nYou have successfully been checked-in.");
-                            // window.location.replace("index.html");
                         })
                         .catch(function (error) {
                             console.error("Error adding document: ", error);

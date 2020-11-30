@@ -48,6 +48,8 @@ function sendMail(service_id, template_id, template_params) {
     emailjs.send(service_id, template_id, template_params)
         .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);
+            // Go to home page now
+            window.location.replace("index.html");
         }, function (error) {
             console.log('FAILED...', error);
         })

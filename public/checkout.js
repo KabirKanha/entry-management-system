@@ -47,7 +47,6 @@ function submitForm(e) {
                             .then(function (docRef) {
                                 console.log("Visit history updated with ID: ", docArchive);
                                 send();
-                                // window.location.replace("index.html");
                             })
                             .catch(function (error) {
                                 console.error("Error adding history: ", error);
