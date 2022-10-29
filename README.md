@@ -78,7 +78,7 @@ I have used:
 
 ## Walk-Through
 
-When a visitor opens the [entry management software](http://entry-management-system-kka.firebaseapp.com/), he/she is faced with a *bouncing ball* loading screen that bridges the loading delay very smoothly.
+When a visitor opens the [entry management software](http://entry-management-system-kka.firebaseapp.com/), they are faced with a *bouncing ball* loading screen that bridges the loading delay very smoothly.
 
 ![Loader](public/Images/Screenshots/1_Loading.png)
 <br><br>
@@ -86,7 +86,7 @@ The home page consists of two main options - **Check-In** and **Check-Out**.
 
 ![Home Page](public/Images/Screenshots/2_MainScreen.png)
 <br><br>
-If the visitor clicks on former, he/she is taken to the check-in page.
+If the visitor clicks on former, they are taken to the check-in page.
 
 ![Check-In Page](public/Images/Screenshots/3_CheckIn.png)
 <br><br>
@@ -110,7 +110,7 @@ The details of this visit are also added to the visit history. The status is cur
 
 ![Check-In added to history](public/Images/Screenshots/8_HistoryDB.png)
 <br><br>
-When the visitor is ready to leave, he/she simply visits the check-out page and types in his/her email ID.
+When the visitor is ready to leave, they simply visit the check-out page and types in his/her email ID.
 
 ![Check-Out Page](public/Images/Screenshots/9_CheckOut.png)
 <br><br>
@@ -134,7 +134,7 @@ Once successsfully logged in, the admin panel looks like this.
 
 ![Admin Panel](public/Images/Screenshots/14_AdminPanel.png)
 <br><br>
-The admin can view a log of all past visits. He/She also has the ability to sort, filter and hide columns. He/she may also copy the file, print it, or export it to XLSX, CSV or PDF.
+The admin can view a log of all past visits. They also have the ability to sort, filter and hide columns. They may also copy the file, print it, or export it to XLSX, CSV or PDF.
 
 ![Visit history](public/Images/Screenshots/15_Visithistory.png)
 <br><br>
