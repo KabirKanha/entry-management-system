@@ -174,7 +174,7 @@ approving certain visitors that they know about, or pre-approving regular visito
 - **Allowing each employee to view a log of his/her own past visitors.**
 
     This can be easily implemented once each host is registered on the web-app and logged
-in, by simply ltering and displaying the already existing historical records.
+in, by simply filtering and displaying the already existing historical records.
 
 - **Automating a phone call to get approval from the host, in addition to Email and SMS, in case of no response.**
 
